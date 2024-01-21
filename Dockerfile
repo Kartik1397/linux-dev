@@ -26,5 +26,6 @@ COPY linux/scripts/min-tool-version.sh /bin/min-tool-version.sh
 
 RUN rustup override set $(min-tool-version.sh rustc)
 RUN rustup component add rust-src
+RUN rustup component add rust-analyzer
 RUN cargo install --locked --version $(min-tool-version.sh bindgen) bindgen
 

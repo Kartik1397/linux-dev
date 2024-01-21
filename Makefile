@@ -62,6 +62,10 @@ busybox/ramdisk.img:
 .PHONY: build-initramfs
 build-initramfs: busybox/ramdisk.img
 	
+.PHONY: clean-initramfs
+clean-initramfs:
+	rm $(CURRENT_DIR)/busybox/ramdisk.img 
+
 # Linux
 
 linux/.config:
